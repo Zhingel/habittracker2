@@ -96,10 +96,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="l98-zK-iEg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F8O-AQ-dQY"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F8O-AQ-dQY">
+                            <connections>
+                                <action selector="cancelButton:" destination="pBl-lE-nDe" id="cgm-Mp-JfO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2mS-6w-Tkz">
                             <connections>
-                                <segue destination="c0P-cT-tY5" kind="unwind" unwindAction="unwind:" id="vIc-au-EJa"/>
+                                <segue destination="c0P-cT-tY5" kind="unwind" unwindAction="unwindFor:" id="cRW-uw-v2R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

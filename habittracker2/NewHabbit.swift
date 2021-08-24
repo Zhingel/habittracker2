@@ -8,8 +8,12 @@
 import UIKit
 
 class NewHabbit: UIViewController {
-    weak var newTask : UITextField!
-    var newPlace : Task!
+    weak var newTaskTextfield : UITextField!
+    weak var chooseTime : UIDatePicker!
+    var newTask : Task!
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
      //   addConstraints()
@@ -24,17 +28,31 @@ class NewHabbit: UIViewController {
            sampleTextField.clearButtonMode = UITextField.ViewMode.whileEditing
            sampleTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
            self.view.addSubview(sampleTextField)
-        sampleTextField.translatesAutoresizingMaskIntoConstraints = false
-        sampleTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        sampleTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
-        newTask = sampleTextField
+            sampleTextField.translatesAutoresizingMaskIntoConstraints = false
+            sampleTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+            sampleTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
+            newTaskTextfield = sampleTextField
+        
+        let date = UIDatePicker()
+        date.datePickerMode = UIDatePicker.Mode.time
+        date.preferredDatePickerStyle = .wheels
+        date.locale = Locale(identifier: "ru_Ru")
+        self.view.addSubview(date)
+        date.translatesAutoresizingMaskIntoConstraints = false
+        date.topAnchor.constraint(equalTo: sampleTextField.bottomAnchor, constant: 40).isActive = true
+        date.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+        chooseTime = date
+        
        
     }
     
-    func newPlaces() {
-        newPlace = Task(toDo: newTask.text!)
+    func newTasks() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let time = formatter.string(from: chooseTime.date)
+        newTask = Task(toDo: newTaskTextfield.text!, time: time)
     }
-
+   
     
 
 }

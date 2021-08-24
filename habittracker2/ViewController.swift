@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var tasks: [Task] = [Task(toDo: "first task")]
+    var tasks: [Task] = [Task(toDo: "first task", time: "00:00")]
     weak var collectionView : UICollectionView!
     
     override func loadView() {
@@ -34,14 +34,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    @IBAction func unwind(_ sender: UIStoryboardSegue) {
-        let newHabit = sender.source as! NewHabbit
-        newHabit.newPlaces()
-        tasks.append(newHabit.newPlace)
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        let newHabbit = unwindSegue.source as! NewHabbit
+        newHabbit.newTasks()
+        tasks.append(newHabbit.newTask)
         collectionView.reloadData()
-       
     }
+
     
     
 }
@@ -61,7 +60,9 @@ extension ViewController: UICollectionViewDataSource {
         cell.backgroundColor = .white
         cell.layer.cornerRadius = 20
         cell.titleLabel.text = tasks[indexPath.row].toDo
+        cell.timeLabel.text = "Каждый день в \(tasks[indexPath.row].time)"
         cell.scoreLabel.text = "Score: \(tasks[indexPath.row].score)"
+        cell.checkButton.setImage(UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30)), for: .normal)
         return cell
     }
 }
