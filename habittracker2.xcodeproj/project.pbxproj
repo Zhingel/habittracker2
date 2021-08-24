@@ -13,6 +13,9 @@
 		EE8AD10F26D4049400E00320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8AD10D26D4049400E00320 /* Main.storyboard */; };
 		EE8AD11126D4049600E00320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8AD11026D4049600E00320 /* Assets.xcassets */; };
 		EE8AD11426D4049600E00320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8AD11226D4049600E00320 /* LaunchScreen.storyboard */; };
+		EE8AD11C26D4084D00E00320 /* habitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AD11B26D4084D00E00320 /* habitCard.swift */; };
+		EE8AD11E26D4094500E00320 /* modelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AD11D26D4094500E00320 /* modelCard.swift */; };
+		EE8AD12226D42D4600E00320 /* NewHabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8AD12126D42D4600E00320 /* NewHabbit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		EE8AD11026D4049600E00320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE8AD11326D4049600E00320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8AD11526D4049600E00320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8AD11B26D4084D00E00320 /* habitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCard.swift; sourceTree = "<group>"; };
+		EE8AD11D26D4094500E00320 /* modelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelCard.swift; sourceTree = "<group>"; };
+		EE8AD12126D42D4600E00320 /* NewHabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabbit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				EE8AD10726D4049400E00320 /* AppDelegate.swift */,
 				EE8AD10926D4049400E00320 /* SceneDelegate.swift */,
 				EE8AD10B26D4049400E00320 /* ViewController.swift */,
+				EE8AD11D26D4094500E00320 /* modelCard.swift */,
+				EE8AD11B26D4084D00E00320 /* habitCard.swift */,
 				EE8AD10D26D4049400E00320 /* Main.storyboard */,
+				EE8AD12126D42D4600E00320 /* NewHabbit.swift */,
 				EE8AD11026D4049600E00320 /* Assets.xcassets */,
 				EE8AD11226D4049600E00320 /* LaunchScreen.storyboard */,
 				EE8AD11526D4049600E00320 /* Info.plist */,
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8AD11C26D4084D00E00320 /* habitCard.swift in Sources */,
 				EE8AD10C26D4049400E00320 /* ViewController.swift in Sources */,
+				EE8AD11E26D4094500E00320 /* modelCard.swift in Sources */,
 				EE8AD10826D4049400E00320 /* AppDelegate.swift in Sources */,
+				EE8AD12226D42D4600E00320 /* NewHabbit.swift in Sources */,
 				EE8AD10A26D4049400E00320 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
